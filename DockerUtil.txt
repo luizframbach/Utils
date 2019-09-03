@@ -1,0 +1,20 @@
+Docker Utils
+
+#### Commands ####
+
+List all images
+- docker images
+
+List all containers
+- docker ps
+
+Delete all containers
+docker rm $(docker ps -aq)
+
+#### Docker Install Programs Commands ####
+
+Install SqlServer
+- docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=yourStrong(!)Password' -p 1433:1433 -d mcr.microsoft.com/mssql/server:2017-CU8-ubuntu
+
+Install ElasticSearch
+- docker pull docker.elastic.co/elasticsearch/elasticsearch:7.3.1
