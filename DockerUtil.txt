@@ -2,6 +2,9 @@ Docker Utils
 
 #### Commands ####
 
+Start a container
+- docker start {ContainerHash}
+
 List all images
 - docker images
 
@@ -9,7 +12,10 @@ List all containers
 - docker ps
 
 Delete all containers
-docker rm $(docker ps -aq)
+- docker rm $(docker ps -aq)
+
+Show docker logs
+- docker logs {Secs}
 
 #### Docker Install Programs Commands ####
 
