@@ -17,10 +17,28 @@ Delete all containers
 Show docker logs
 - docker logs {Secs}
 
+Stop process
+- ctrl + c
+
 #### Docker Install Programs Commands ####
 
-Install SqlServer
-- docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=yourStrong(!)Password' -p 1433:1433 -d mcr.microsoft.com/mssql/server:2017-CU8-ubuntu
+Install SqlServer{
+   - docker pull mcr.microsoft.com/mssql/server:2017-CU8-ubuntu
 
-Install ElasticSearch
-- docker pull docker.elastic.co/elasticsearch/elasticsearch:7.3.1
+   - docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=yourStrong(!)Password' -p 1433:1433 -d mcr.microsoft.com/mssql/server:2017-CU8-ubuntu
+}
+
+Install ElasticSearch{
+   - docker pull docker.elastic.co/elasticsearch/elasticsearch:7.3.1
+}
+
+Install TeamSpeak {
+   - docker pull teamspeak
+
+   - docker run -p 9987:9987/udp -p 10011:10011 -p 30033:30033 -e TS3SERVER_LICENSE=accept teamspeak
+}
+
+#### Docker Extras ####
+
+How to install docker on ubunto
+- https://linuxize.com/post/how-to-install-and-use-docker-on-debian-9/
